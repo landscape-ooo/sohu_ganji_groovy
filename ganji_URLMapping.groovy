@@ -167,7 +167,7 @@ class GanjiURLMapping extends URLMappingProcessor {
                 {
                     if (mode == "c")
                     {
-                        // need to crop
+			// need to crop
                         def temp_width = src_width
                         def temp_height = src_height
                         if (width * src_height > height * src_width) {
@@ -179,10 +179,14 @@ class GanjiURLMapping extends URLMappingProcessor {
                         def crop_y=0
                         crop_x= (src_width - temp_width) / 2;
                         crop_y= (src_height - temp_height) / 2;
-                        modeStr += "c_cut,x_${crop_x},y_${crop_y},w_${temp_width},h_${temp_height}"
+                        
                         if (height < temp_width) {
+                            modeStr += "c_fill,w_${width},h_${height}"
+                            
                             src_width = width
                             src_height = height
+                        }else{
+                            modeStr += "c_cut,x_${crop_x},y_${crop_y},w_${temp_width},h_${temp_height}"
                         }
                     }
                     else if (mode == "f")
