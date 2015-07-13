@@ -183,7 +183,7 @@ class GanjiURLMapping extends URLMappingProcessor {
                         crop_y = (int)Math.round(crop_y)
                          
                         if (height < temp_width) {
-                            modeStr += "c_fill,w_${width},h_${height}"
+                            modeStr += "c_lfill,w_${width},h_${height}"
                             
                             src_width = width
                             src_height = height
