@@ -16,7 +16,9 @@ class GanjiURLMapping extends URLMappingProcessor {
         '',
         'mayi_you.png',
         'mayi_you_br.png',
-        'mayi_you_br_big.png'
+        'mayi_you_br_big.png',
+        'haozu.png',
+        'haozu_large.png',
     ]
 
     def CATEGORYS = [
@@ -60,6 +62,8 @@ class GanjiURLMapping extends URLMappingProcessor {
         'wanted':[0, 3, false],
         'parttime_wanted':[0, 3, false],
         'findjob':[0, 3, false],
+        'haozu':[8, 3, false],
+        'haozu_large':[9, 3, false],
     ]
 
     def DUANZU_CATEGORYS = [
